@@ -6,7 +6,6 @@ export default function () {
 	return (
 		<>
 			<Hero />;
-			<GoalSelect />
 			<ResultWrapper />
 		</>
 	);

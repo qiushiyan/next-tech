@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import Card from "./shared/Card";
 import SecondaryHeading from "./shared/SecondaryHeading";
+import GoalSelect from "./GoalSelect";
 
 export default function InputWrapper() {
 	const payload = useStore(payloadStore);
@@ -48,6 +49,7 @@ export default function InputWrapper() {
 
 	return (
 		<>
+			<GoalSelect setResult={setResult} />
 			{InputComponent}
 			<div
 				className={clsx(
