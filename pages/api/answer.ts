@@ -14,9 +14,9 @@ const handler = async (req: Request) => {
 	const payload = (await req.json()) as Payload;
 	let prompt: string;
 	if (payload.goal === AllGoals.COMPARE) {
-		prompt = `Compare ${payload.languages[0]} with ${payload.languages[1]}. Make a list of 3 pros and cons for each language, each pro or con should be less than 20 words. Make sure it meets my needs. ${payload.description}. Answer in the form of "Language Pro" and "Language Con".`;
+		prompt = `Compare ${payload.languages[0]} with ${payload.languages[1]}. \nMake a list of 3 pros and cons for each language, each pro or con should be less than 30 words. Make sure it meets my needs. ${payload.description}. Answer in the form of "{Language} {Pros}" and "{Language} {Cons}".`;
 	} else if (payload.goal === AllGoals.FIND_BEST) {
-		prompt = `${payload.description}. Give me a list of the top 3 programming languages I could learn, include a reason shorter than 50 words and a link to resources.`;
+		prompt = `${payload.description}. \nGive me a list of the top 3 programming languages or frameworks in those languages I could learn, include a reason shorter than 50 words and a link to resources. Answer in to form of "{langauge} - {reason}"`;
 	}
 
 	const request: OpenAIStreamPayload = {

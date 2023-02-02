@@ -1,7 +1,7 @@
 export default function () {
 	return (
 		<div className="max-w-5xl mx-auto mt-12 font-display text-3xl font-medium tracking-tight text-slate-900 sm:text-6xl capitalize">
-			<h1 className=" text-center">Picking your next language</h1>
+			<h1 className=" text-center">Picking your next technology</h1>
 			<div className="text-center mt-2">
 				<span className="relative whitespace-nowrap">
 					<svg

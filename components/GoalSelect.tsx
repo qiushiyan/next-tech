@@ -1,15 +1,11 @@
 "use client";
 
-import { AllGoals, payloadStore, selectGoal } from "@lib/store";
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { AllGoals, selectGoal, setResult } from "@lib/store";
+import { ChangeEvent } from "react";
 import Container from "./shared/Container";
 import SecondaryHeading from "./shared/SecondaryHeading";
 
-interface Props {
-	setResult: Dispatch<SetStateAction<string>>;
-}
-
-export default function ({ setResult }: Props) {
+export default function () {
 	const handleSelect = (e: ChangeEvent<HTMLSelectElement>) => {
 		e.preventDefault();
 		setResult("");

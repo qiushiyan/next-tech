@@ -1,8 +1,8 @@
-import { map } from "nanostores";
+import { atom, map } from "nanostores";
 
 export enum AllGoals {
-	COMPARE = "Compare two programming languages",
-	FIND_BEST = "Find the best programming language for a task",
+	FIND_BEST = "Find the best technology for a task",
+	COMPARE = "Compare two languages/frameworks",
 }
 
 export interface Payload {
@@ -18,10 +18,12 @@ export interface Payload {
 // };
 
 export const payloadStore = map<Payload>({
-	goal: AllGoals.COMPARE,
+	goal: AllGoals.FIND_BEST,
 	description: "",
-	languages: ["Python", "R"],
+	languages: ["", ""],
 });
+
+export const resultStore = atom<string>("");
 
 export const selectLanguage = (index: 0 | 1, lang: string) => {
 	const langs = payloadStore.get().languages;
@@ -35,4 +37,8 @@ export const selectGoal = (goal: AllGoals) => {
 
 export const setDescription = (description: string) => {
 	payloadStore.setKey("description", description);
+};
+
+export const setResult = (result: string) => {
+	resultStore.set(result);
 };

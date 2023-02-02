@@ -1,8 +1,7 @@
 export default function Head() {
-	const title =
-		"Language War: choosing your next programming languaeg made easy";
+	const title = "Next Tech: choosing your next tech stack made easy";
 	const description =
-		"Language war makes intelligent suggestions on your next programming language to learn based on your needs.";
+		"Next tech makes intelligent suggestions on your next programming language or frameworks to learn based on your needs.";
 
 	return (
 		<>

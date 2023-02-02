@@ -12,7 +12,7 @@ export default function (props: Props) {
 	return (
 		<div
 			className={clsx(
-				"bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border w-2/3",
+				"bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border",
 				props.className,
 			)}
 		>

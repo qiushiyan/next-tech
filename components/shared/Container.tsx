@@ -1,5 +1,14 @@
+import clsx from "clsx";
 import React from "react";
 
-export default function Container({ children }: { children: React.ReactNode }) {
-	return <div className="max-w-5xl mx-auto text-center my-8">{children}</div>;
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+	children?: React.ReactNode;
+}
+
+export default function Container({ children, className }: Props) {
+	return (
+		<div className={clsx("max-w-5xl mx-auto text-center my-10", className)}>
+			{children}
+		</div>
+	);
 }
