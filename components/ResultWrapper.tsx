@@ -116,11 +116,15 @@ export default function ResultWrapper() {
 										>
 											{langName}
 										</SecondaryHeading>
-										{langContent.split(/\d./).map((feat) => (
-											<Card key={feat} className="w-full mx-10">
-												{feat}
-											</Card>
-										))}
+										{langContent.split(/\d\./).map((feat) => {
+											return (
+												feat.trim() !== "" && (
+													<Card key={feat} className="w-full mx-10">
+														{feat}
+													</Card>
+												)
+											);
+										})}
 									</div>
 								);
 							})}
