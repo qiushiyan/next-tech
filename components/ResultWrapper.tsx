@@ -78,7 +78,7 @@ export default function ResultWrapper() {
 						<span>Find Answer</span>
 					)}
 				</Button>
-				<div className="max-w-5xl mx-auto min-h-[40vh] flex justify-center items-center flex-col">
+				<div className="max-w-5xl mx-auto min-h-[10vh] flex justify-center items-center flex-col">
 					{result !== "" &&
 						payload.goal === AllGoals.FIND_BEST &&
 						result
